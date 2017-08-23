@@ -1,0 +1,27 @@
+{
+  "name": "cli-todo",
+  "version": "1.0.0",
+  "description": "Command Line To-Do List",
+  "main": "tasks.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ontoneio/cli-todo.git"
+  },
+  "author": "Jonathan A. Mitchell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ontoneio/cli-todo/issues"
+  },
+  "homepage": "https://github.com/ontoneio/cli-todo#readme",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "renderkid": "^2.0.1"
+  }
+}
