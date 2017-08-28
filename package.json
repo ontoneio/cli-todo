@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "test": "node tests.js | faucet"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/ontoneio/cli-todo#readme",
   "devDependencies": {
-    "chai": "^4.1.1",
-    "mocha": "^3.5.0",
-    "renderkid": "^2.0.1"
+    "faucet": "0.0.1",
+    "renderkid": "^2.0.1",
+    "tape": "^4.8.0"
   }
 }
