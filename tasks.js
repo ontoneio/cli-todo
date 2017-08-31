@@ -6,7 +6,7 @@ const complete = require('./commands/complete')
 const remove = require('./commands/delete')
 
 const firstParam = process.argv.slice[2]
-const secondParam = process.argv.slice[3]
+const secondParam = process.argv.slice[3].join(' ')
 
 switch (firstParam) {
     case 'add':

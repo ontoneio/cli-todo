@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ontoneio/cli-todo#readme",
   "devDependencies": {
     "faucet": "0.0.1",
+    "fixture-factory": "^1.5.1",
     "renderkid": "^2.0.1",
     "tape": "^4.8.0"
   }
