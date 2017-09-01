@@ -24,6 +24,7 @@
     "mocha": "^3.5.0"
   },
   "dependencies": {
+    "faker": "^4.1.0",
     "renderkid": "^2.0.1"
   }
 }
