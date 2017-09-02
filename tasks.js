@@ -8,7 +8,6 @@ const remove = require('./commands/delete')
 const commandArg = process.argv[2]
 const taskArg = process.argv.slice(3).join(" ")
 
-// console.log('command is  '+commandArg + '\n Task Arg is  '+ taskArg )
 
 switch (commandArg) {
     case 'add':
