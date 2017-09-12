@@ -1,19 +1,16 @@
 const faker = require('faker')
 
 
-function validCommand(command) {
-   if (command === 'add'|'list'|'delete'|'complete') {
-        return true
-    }  else {
-        return false
-    } 
+function isValidCommand(command) {
+    const validCommands = ['add', 'complete', 'delete', 'list']    
+    if (validCommands.indexOf(command !== -1)){
+        throw new Error(console.log())
+    }
 }
 
 
 function generateTestFixture(command) {
-    if(!validCommand(command)) {
-        throw new Error(`Command not valid, Please use 'add', 'list', 'delete', 'complete'.`)
-    }
+
     const testInstance = {
         programName: './tasks',
         commands: command,
@@ -23,5 +20,5 @@ function generateTestFixture(command) {
 }
 
 module.exports = {
-    valid: validCommand
+    isValid: isValidCommand
 }
