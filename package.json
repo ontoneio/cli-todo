@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "test": "node test/test.js | tnyan"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/ontoneio/cli-todo#readme",
   "devDependencies": {
-    "chai": "^4.1.1",
-    "mocha": "^3.5.0",
+    "tap-nyan": "^1.1.0",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "ramda": "^0.24.1",
     "renderkid": "^2.0.1"
   }
 }
