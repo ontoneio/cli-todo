@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/test.js | faucet"
+    "test": "node test/test.js | tnyan"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/ontoneio/cli-todo#readme",
   "devDependencies": {
-    "faucet": "0.0.1",
+    "tap-nyan": "^1.1.0",
     "tape": "^4.8.0"
   },
   "dependencies": {
-    "faker": "^4.1.0",
+    "ramda": "^0.24.1",
     "renderkid": "^2.0.1"
   }
 }

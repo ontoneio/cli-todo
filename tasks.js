@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+
 const list = require('./commands/list')
 const add = require('./commands/add')
 const complete = require('./commands/complete')
@@ -27,5 +28,5 @@ switch (commandArg) {
         console.log(taskArg)
         break;
     default:
-        console.log("Invalid Argument");
+        console.error(`\n${commandArg} is not a valid command\nUse 'add' 'complete' 'delete' 'list'\n`); 
 }
