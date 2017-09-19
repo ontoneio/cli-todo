@@ -24,7 +24,7 @@ const readJSONFile = callback => {
     })    
 }
 
-const writeJSONFile
+const writeJSONFile = 
 
 module.exports = {
     read: readJSONFile
