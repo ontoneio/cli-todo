@@ -1,31 +1,37 @@
 const path = require('path')
 const fs = require('fs')
-
-const taskFile = path.resolve("./cli-todo/taskFile.json")
+const taskFilePath = path.resolve("./cli-todo/taskFile.json")
 
 const exit = error => { 
     console.error(error)
     process.exit(1)
 }
 
-const readJSONFile = callback => { 
-    fs.readFile(taskFile, (error, json) => {
-        if (error) {
-            if(error.message.includes("ENOENT")) {
-                callback([])
-            }
-            else {
-                exit(error)
-            }
+const checkJSONExists = () => {
+    console.log(fs.existsSync(taskFilePath))
+    return fs.existsSync(taskFilePath)
+}
+const isJSONexecutable = callback => {
+    fs.access(taskFilePath, (error, data) => {
+        if(error) {
+             console.log(error) 
         }
-        else {
-            callback(JSON.parse(json))
-        }           
-    })    
+        else { 
+            callback(data)
+        }
+    })
 }
 
-const writeJSONFile
+const readJSONfile = (error, data) => {
+    fs.readFile(JSON.parse(taskFilePath))
+}
 
 module.exports = {
-    read: readJSONFile
+    exists: checkJSONExists
 }
+
+// Invoking functions
+
+checkJSONExists()
+
+isJSONexecutable()
