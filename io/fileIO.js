@@ -7,9 +7,21 @@ const exit = error => {
     process.exit(1)
 }
 
-const isValidJSON = () => {
-    console.log(fs.existsSync(taskFilePath))
-    return fs.existsSync(taskFilePath)
+const createJSONFile = (fileName, dataObj) => {
+    let jsonFile = fileName + '.json'
+    let jsonData = JSON.stringify(dataObj)
+
+    fs.appendFile(jsonFile, jsonData ,(error) => {
+        if(error) console.error(`No Data to append to ${jsonFile}`);
+        
+        console.log(`${jsonData} was appended to ${jsonFile}`);
+        return jsonFile
+    })
+}
+
+const isValidJSON = (filePath) => {
+    console.log(fs.existsSync(filePath))
+    return fs.existsSync(filePath)
 }
 
 
@@ -20,12 +32,13 @@ const readJSONfile = () => {
     })
 }
 
+
+
 module.exports = {
-    
+    create: createJSONFile,
+    isValid: isValidJSON
 }
 
 // Invoking functions
-// checkJSONExists()
-isValidJSON()
 
-readJSONfile()
+isValidJSON()
